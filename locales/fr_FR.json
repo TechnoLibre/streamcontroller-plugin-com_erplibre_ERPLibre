@@ -38,5 +38,15 @@
     "actions.odoo-workflow.config.custom-model": "Modèle personnalisé",
     "actions.odoo-workflow.config.custom-method": "Méthode personnalisée",
     "actions.odoo-workflow.config.custom-label": "Étiquette personnalisée",
-    "actions.odoo-workflow.config.custom-domain": "Domaine personnalisé (JSON)"
+    "actions.odoo-workflow.config.custom-domain": "Domaine personnalisé (JSON)",
+    "actions.webcam.name": "Webcam",
+    "actions.webcam.config.source": "Type de source",
+    "actions.webcam.config.camera-index": "Index caméra",
+    "actions.webcam.config.ip-url": "URL caméra IP",
+    "actions.webcam.config.fps": "Images par seconde",
+    "actions.brightness.name": "Luminosité",
+    "actions.brightness.config.direction": "Direction",
+    "actions.brightness.config.step": "Pas (%)",
+    "actions.keyboard.name": "Clavier auto",
+    "actions.keyboard.config.erplibre-path": "Chemin ERPLibre"
 }

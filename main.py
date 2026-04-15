@@ -21,6 +21,9 @@ from .actions.DbAction.DbAction import DbAction
 from .actions.ModuleAction.ModuleAction import ModuleAction
 from .actions.OdooCounter.OdooCounter import OdooCounter
 from .actions.OdooWorkflow.OdooWorkflow import OdooWorkflow
+from .actions.WebcamAction.WebcamAction import WebcamAction
+from .actions.BrightnessAction.BrightnessAction import BrightnessAction
+from .actions.KeyboardAction.KeyboardAction import KeyboardAction
 
 
 class ERPLibrePlugin(PluginBase):
@@ -128,6 +131,48 @@ class ERPLibrePlugin(PluginBase):
             },
         )
         self.add_action_holder(self.odoo_workflow_holder)
+
+        # Action: Webcam feed on button (local or IP)
+        self.webcam_holder = ActionHolder(
+            plugin_base=self,
+            action_base=WebcamAction,
+            action_id_suffix="WebcamAction",
+            action_name=self.lm.get("actions.webcam.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.UNSUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.webcam_holder)
+
+        # Action: Brightness control
+        self.brightness_holder = ActionHolder(
+            plugin_base=self,
+            action_base=BrightnessAction,
+            action_id_suffix="BrightnessAction",
+            action_name=self.lm.get("actions.brightness.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.SUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.brightness_holder)
+
+        # Action: Keyboard automation (keyboard_talk.py)
+        self.keyboard_holder = ActionHolder(
+            plugin_base=self,
+            action_base=KeyboardAction,
+            action_id_suffix="KeyboardAction",
+            action_name=self.lm.get("actions.keyboard.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.UNSUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.keyboard_holder)
 
         self.register(
             plugin_name=self.lm.get("plugin.name"),
