@@ -1,0 +1,9 @@
+{
+    "generic": {
+        "copyright": "Copyright (C) 2026 TechnoLibre (http://www.technolibre.ca)",
+        "original-url": "https://github.com/ERPLibre/streamcontroller-erplibre",
+        "license": "AGPL-3.0",
+        "license-url": "https://www.gnu.org/licenses/agpl-3.0.html",
+        "description": "ERPLibre Stream Deck integration plugin"
+    }
+}

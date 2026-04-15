@@ -1,0 +1,13 @@
+{
+    "plugin.name": "ERPLibre",
+    "actions.odoo-status.name": "Statut Odoo",
+    "actions.odoo-status.config.url": "URL du serveur",
+    "actions.odoo-status.config.database": "Base de données",
+    "actions.odoo-status.label.online": "En ligne",
+    "actions.odoo-status.label.offline": "Hors ligne",
+    "actions.todo-launcher.name": "Lanceur TODO",
+    "actions.todo-launcher.config.erplibre-path": "Chemin ERPLibre",
+    "actions.make-target.name": "Cible Make",
+    "actions.make-target.config.target": "Cible Makefile",
+    "actions.make-target.config.erplibre-path": "Chemin ERPLibre"
+}

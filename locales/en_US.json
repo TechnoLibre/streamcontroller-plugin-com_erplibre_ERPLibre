@@ -1,0 +1,13 @@
+{
+    "plugin.name": "ERPLibre",
+    "actions.odoo-status.name": "Odoo Status",
+    "actions.odoo-status.config.url": "Server URL",
+    "actions.odoo-status.config.database": "Database",
+    "actions.odoo-status.label.online": "Online",
+    "actions.odoo-status.label.offline": "Offline",
+    "actions.todo-launcher.name": "TODO Launcher",
+    "actions.todo-launcher.config.erplibre-path": "ERPLibre Path",
+    "actions.make-target.name": "Make Target",
+    "actions.make-target.config.target": "Makefile Target",
+    "actions.make-target.config.erplibre-path": "ERPLibre Path"
+}

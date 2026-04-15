@@ -1,0 +1,14 @@
+{
+    "author": "TechnoLibre",
+    "copyright": "Copyright (C) 2026 TechnoLibre (http://www.technolibre.ca)",
+    "support": "https://github.com/ERPLibre/streamcontroller-erplibre/issues",
+    "comments": {
+        "en_US": "ERPLibre/Odoo integration for StreamController",
+        "fr_FR": "Intégration ERPLibre/Odoo pour StreamController"
+    },
+    "credits": {
+        "Contributors": [
+            "Mathieu Benoit"
+        ]
+    }
+}

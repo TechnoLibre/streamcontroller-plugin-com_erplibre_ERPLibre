@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "id": "com_erplibre_ERPLibre",
+    "name": "ERPLibre",
+    "thumbnail": "store/Thumbnail.png",
+    "app-version": "1.5.0-beta.6",
+    "minimum-app-version": "1.0.0",
+    "github": "https://github.com/ERPLibre/streamcontroller-erplibre",
+    "descriptions": {
+        "en_US": "Control ERPLibre/Odoo from your Stream Deck. Monitor server status, launch todo.py, run Makefile targets, and trigger Odoo actions.",
+        "fr_FR": "Contrôlez ERPLibre/Odoo depuis votre Stream Deck. Surveillez le serveur, lancez todo.py, exécutez des cibles Makefile et déclenchez des actions Odoo."
+    },
+    "short-descriptions": {
+        "en_US": "ERPLibre/Odoo Stream Deck integration",
+        "fr_FR": "Intégration Stream Deck pour ERPLibre/Odoo"
+    },
+    "tags": [
+        "Productivity",
+        "Utility"
+    ]
+}
