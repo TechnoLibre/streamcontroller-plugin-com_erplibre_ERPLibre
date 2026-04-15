@@ -19,6 +19,8 @@ from .actions.TodoLauncher.TodoLauncher import TodoLauncher
 from .actions.MakeTarget.MakeTarget import MakeTarget
 from .actions.DbAction.DbAction import DbAction
 from .actions.ModuleAction.ModuleAction import ModuleAction
+from .actions.OdooCounter.OdooCounter import OdooCounter
+from .actions.OdooWorkflow.OdooWorkflow import OdooWorkflow
 
 
 class ERPLibrePlugin(PluginBase):
@@ -98,6 +100,34 @@ class ERPLibrePlugin(PluginBase):
             },
         )
         self.add_action_holder(self.module_action_holder)
+
+        # Action: Odoo record counter (sales, invoices, tickets...)
+        self.odoo_counter_holder = ActionHolder(
+            plugin_base=self,
+            action_base=OdooCounter,
+            action_id_suffix="OdooCounter",
+            action_name=self.lm.get("actions.odoo-counter.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.SUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNTESTED,
+            },
+        )
+        self.add_action_holder(self.odoo_counter_holder)
+
+        # Action: Odoo workflow trigger (confirm SO, post invoice...)
+        self.odoo_workflow_holder = ActionHolder(
+            plugin_base=self,
+            action_base=OdooWorkflow,
+            action_id_suffix="OdooWorkflow",
+            action_name=self.lm.get("actions.odoo-workflow.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.UNSUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.odoo_workflow_holder)
 
         self.register(
             plugin_name=self.lm.get("plugin.name"),
