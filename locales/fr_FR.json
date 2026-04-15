@@ -9,5 +9,15 @@
     "actions.todo-launcher.config.erplibre-path": "Chemin ERPLibre",
     "actions.make-target.name": "Cible Make",
     "actions.make-target.config.target": "Cible Makefile",
-    "actions.make-target.config.erplibre-path": "Chemin ERPLibre"
+    "actions.make-target.config.erplibre-path": "Chemin ERPLibre",
+    "actions.db-action.name": "Base de données",
+    "actions.db-action.config.operation": "Opération",
+    "actions.db-action.config.database": "Nom de la base",
+    "actions.db-action.config.image": "Nom de l'image (restore seulement)",
+    "actions.db-action.config.erplibre-path": "Chemin ERPLibre",
+    "actions.module-action.name": "Module",
+    "actions.module-action.config.operation": "Opération",
+    "actions.module-action.config.module": "Nom du module",
+    "actions.module-action.config.database": "Nom de la base",
+    "actions.module-action.config.erplibre-path": "Chemin ERPLibre"
 }

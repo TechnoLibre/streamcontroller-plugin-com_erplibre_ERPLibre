@@ -9,6 +9,8 @@ Plugin [StreamController](https://github.com/StreamController/StreamController) 
 | **Odoo Status** | Affiche le statut du serveur Odoo (en ligne / hors ligne) via XML-RPC. Rafraîchi chaque seconde. |
 | **TODO Launcher** | Lance le CLI interactif `todo.py` d'ERPLibre dans un terminal. |
 | **Make Target** | Exécute une cible Makefile configurable (`run`, `test`, `format`, etc.). |
+| **Database** | Opérations de base de données : restore, drop, list. Supporte les images de restauration. |
+| **Module** | Install, update ou update_all de modules Odoo. |
 
 ## Prérequis
 
@@ -52,6 +54,8 @@ Chaque action se configure via l'interface StreamController :
 - **Odoo Status** : URL du serveur (`http://localhost:8069`), nom de la base de données
 - **TODO Launcher** : chemin vers l'installation ERPLibre (`~/erplibre01`)
 - **Make Target** : cible Makefile à exécuter, chemin ERPLibre
+- **Database** : opération (restore/drop/list), nom de la base, image de restauration, chemin ERPLibre
+- **Module** : opération (install/update/update_all), nom du module, base de données, chemin ERPLibre
 
 ## Structure du plugin
 
@@ -62,7 +66,9 @@ com_erplibre_ERPLibre/
 ├── actions/
 │   ├── OdooStatus/OdooStatus.py     # Statut serveur Odoo (XML-RPC)
 │   ├── TodoLauncher/TodoLauncher.py # Lanceur todo.py
-│   └── MakeTarget/MakeTarget.py     # Exécution cible Makefile
+│   ├── MakeTarget/MakeTarget.py     # Exécution cible Makefile
+│   ├── DbAction/DbAction.py        # Opérations base de données
+│   └── ModuleAction/ModuleAction.py # Install/update modules Odoo
 ├── locales/
 │   ├── en_US.json                   # Traductions anglais
 │   └── fr_FR.json                   # Traductions français

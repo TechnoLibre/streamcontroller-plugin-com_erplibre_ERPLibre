@@ -17,6 +17,8 @@ from gi.repository import Gtk, Adw
 from .actions.OdooStatus.OdooStatus import OdooStatus
 from .actions.TodoLauncher.TodoLauncher import TodoLauncher
 from .actions.MakeTarget.MakeTarget import MakeTarget
+from .actions.DbAction.DbAction import DbAction
+from .actions.ModuleAction.ModuleAction import ModuleAction
 
 
 class ERPLibrePlugin(PluginBase):
@@ -68,6 +70,34 @@ class ERPLibrePlugin(PluginBase):
             },
         )
         self.add_action_holder(self.make_target_holder)
+
+        # Action: Database operations (restore/drop/list)
+        self.db_action_holder = ActionHolder(
+            plugin_base=self,
+            action_base=DbAction,
+            action_id_suffix="DbAction",
+            action_name=self.lm.get("actions.db-action.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.UNSUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.db_action_holder)
+
+        # Action: Module install/update
+        self.module_action_holder = ActionHolder(
+            plugin_base=self,
+            action_base=ModuleAction,
+            action_id_suffix="ModuleAction",
+            action_name=self.lm.get("actions.module-action.name"),
+            action_support={
+                Input.Key: ActionInputSupport.SUPPORTED,
+                Input.Dial: ActionInputSupport.UNSUPPORTED,
+                Input.Touchscreen: ActionInputSupport.UNSUPPORTED,
+            },
+        )
+        self.add_action_holder(self.module_action_holder)
 
         self.register(
             plugin_name=self.lm.get("plugin.name"),

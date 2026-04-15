@@ -9,5 +9,15 @@
     "actions.todo-launcher.config.erplibre-path": "ERPLibre Path",
     "actions.make-target.name": "Make Target",
     "actions.make-target.config.target": "Makefile Target",
-    "actions.make-target.config.erplibre-path": "ERPLibre Path"
+    "actions.make-target.config.erplibre-path": "ERPLibre Path",
+    "actions.db-action.name": "Database",
+    "actions.db-action.config.operation": "Operation",
+    "actions.db-action.config.database": "Database Name",
+    "actions.db-action.config.image": "Image Name (restore only)",
+    "actions.db-action.config.erplibre-path": "ERPLibre Path",
+    "actions.module-action.name": "Module",
+    "actions.module-action.config.operation": "Operation",
+    "actions.module-action.config.module": "Module Name",
+    "actions.module-action.config.database": "Database Name",
+    "actions.module-action.config.erplibre-path": "ERPLibre Path"
 }
